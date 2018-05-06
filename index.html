@@ -5,6 +5,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="hello2.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
@@ -18,6 +19,7 @@
         <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
         <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script>
     </head>
 <body  style="background-color:LightGoldenRodYellow ;">
 <div class="container">
@@ -27,7 +29,7 @@
     <div class="input-group">
       <input type="text" class="form-control" placeholder="Search for...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search hidden-xs hidden-sm" ></span></button>
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search hidden-xs hidden-sm"></span></button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -35,11 +37,12 @@
    <table id="example" class="display" style="width:100%">
         <thead id="heads" style="background-color:Orange ;">
         </thead>
+            <tbody>
+      
+    </tbody>
    </table>
-</div><!-- /.container -->
 <br>
 <br>
-<div class="container">
 <div class="jumbotron">
   <h2>Welcome!!!</h2>      
   <p>This is a beta version of our Amazon Keyword Research Tool. As it is the beta version it provides very limited results and it works in real time for which it is little slow. Currently it only provides search result for <strong>Kindle</strong> only and have only one marketplace i.e. <strong>Amazon.de</strong>. For the final product on average the number of keywords provided in the result will be atleast <strong>10 times</strong> of the current one, will be much much faster and have other departments and multiple markeplaces. Hope you will find our product useful</p>
