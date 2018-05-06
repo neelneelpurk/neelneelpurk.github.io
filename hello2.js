@@ -3,7 +3,7 @@ $(document).ready(function() {
  $("button").click(function(){
     var url0 = "https://keyword-spy.herokuapp.com/keyword?q=";
     var url1 = url0 + $("input:text").val()
-    content = "<tr><th></th><th>Keyword</th><th>Price</th><th>Rating</th><th>Review</th><th>Salesrank</th><th>Score</th></tr>";
+    content = "<tr><th>Keyword</th><th>Price</th><th>Rating</th><th>Review</th><th>Salesrank</th><th>Score</th></tr>";
     $('#heads').html(content);
     $('#example').DataTable( {
         "destroy": true,
