@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello jQuery</title>
+        <title>AMZN Keyword Research Tool</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="hello2.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css"></script>
     </head>
-<body>
-
-<form id="frm1" action="/action_page.php">
-  Search Query: <input type="text" name="fname" value="Donald"><br>
-</form> 
-<button>Search</button>
-
-<div id="here_table"></div>
-<p class="Language"></p>
-<p id="Price"></p>
-<p id="Title"></p>
-<p id="Author"></p>
-
+<body  style="background-color:LightGoldenRodYellow ;">
+<div class="container">
+<div><h2>AMZN Keyword Research Tool</h2></div><br>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search hidden-xs hidden-sm" aria-hidden="true"></span></button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row --><br><br><br>
+</div><!-- /.container -->
+   <table id="example" class="display" style="width:100%">
+        <thead id="heads" style="background-color:Orange ;">
+        </thead>
+   </table>
+<br>
+<br>
+<div class="container">
+<div class="jumbotron">
+  <h2>Welcome!!!</h2>      
+  <p>This is a beta version of our Amazon Keyword Research Tool. As it is the beta version it provides very limited results and it works in real time for which it is little slow. Currently it only provides search result for <strong>Kindle</strong> only and have only one marketplace i.e. <strong>Amazon.de</strong>. For the final product on average the number of keywords provided in the result will be atleast <strong>10 times</strong> of the current one, will be much much faster and have other departments and multiple markeplaces. Hope you will find our product useful</p>
+</div><!-- /.jumbotron -->
+</div><!-- /.container -->
 </body>
-</html>
