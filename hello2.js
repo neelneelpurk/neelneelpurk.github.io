@@ -1,44 +1,32 @@
+
 $(document).ready(function() {
-    $("button").click(function(){
-    	var url0 = "https://keyword-spy.herokuapp.com/keyword?q=";
-        var url1 = url0 + $("input:text").val()
-    	$.ajax({
-    	    url: url1
-    	}).then(function(data) {
-	   var content = "<table>"
-           content += '<tr>';
-           content += '<td>' + 'Keyword' + '</td>';
-           content += '<td>' + 'Price' + '</td>';
-    	   content += '<td>' + 'Rating' + '</td>';
-    	   content += '<td>' + 'Review' + '</td>';
-	   content += '<td>' + 'Salesrank' + '</td>';
-    	   content += '<td>' + 'Score' + '</td>';
-           content += '</tr>'
-           for(i=0; i<10; i++){
-                content += '<tr>';
-                content += '<td>' + data[i].keyword + '</td>';
-		if(data[i].price>0){
-		        content += '<td>' + data[i].price + '</td>';
-	    		content += '<td>' + data[i].rating + '</td>';
-			content += '<td>' + data[i].review + '</td>';
-			content += '<td>' + data[i].salesrank + '</td>';
-			content += '<td>' + data[i].score + '</td>';
-		        content += '</tr>'
-	   	}
-		else{
-                        content += '<td>' + "N/A" + '</td>';
-			content += '<td>' + "N/A" + '</td>';
-			content += '<td>' + "N/A" + '</td>';	
-			content += '<td>' + "N/A" + '</td>';
-			content += '<td>' + "N/A" + '</td>';	
-		        content += '</tr>'
-		}
-	   }      
-           content += "</table>"
-           $('#here_table').html(content);
-	});
-    });
-});
-
-
-
+ $("button").click(function(){
+    var url0 = "https://keyword-spy.herokuapp.com/keyword?q=";
+    var url1 = url0 + $("input:text").val()
+    content = "<tr><th></th><th>Keyword</th><th>Price</th><th>Rating</th><th>Review</th><th>Salesrank</th><th>Score</th></tr>";
+    $('#heads').html(content);
+    $('#example').DataTable( {
+        "destroy": true,
+        'ajax': {
+        "crossDomain": true,
+        "url"    : url1,
+        "dataSrc": ""
+        },
+        "columns": [
+            { "data": "keyword" },
+            { "data": "price" },
+            { "data": "rating" },
+            { "data": "review" },
+            { "data": "salesrank" },
+            { "data": "score" }
+        ],
+        dom: 'Bfrtip',
+        buttons: [
+            'copyHtml5',
+            'excelHtml5',
+            'csvHtml5',
+            'pdfHtml5'
+        ]
+} );
+} );
+} );
