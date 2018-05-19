@@ -13,7 +13,7 @@ function format ( d ) {
             	'<th>Title</th>'+
             	'<th>Salesrank</th>'+
               '<th>No of Pages</th>'+
-            	'<th>Price</th>'+
+            	'<th>Price(€)</th>'+
               '<th>Review</th>'+
             	'<th>Rating</th>'+  
            '</thead><tbody>' +
@@ -24,7 +24,7 @@ function format ( d ) {
 
 $(document).ready(function() {
   $("button").click(function(){
-    content = "<tr><th></th><th>Keyword</th><th>Price</th><th>Rating</th><th>Review</th><th>Salesrank</th><th>Score</th></tr>";
+    content = "<tr><th></th><th>Keyword</th><th>Price(€)</th><th>Rating</th><th>Review</th><th>Salesrank</th><th>Score</th></tr>";
     $('#heads').html(content);
     var table = $('#example').DataTable({
         "destroy": true,
