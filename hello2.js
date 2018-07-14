@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $("button").click(function(){
+	document.getElementById("suggested_Result_box").innerHTML = ""; 
 	var url1 =$("input:text").val()
         var url2 = "https://cors-anywhere.herokuapp.com/";
     	var url = url2+"https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Ddigital-text&field-keywords="+url1;
